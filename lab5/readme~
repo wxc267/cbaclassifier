@@ -12,5 +12,3 @@ Then the rules will be output to the folder under step3/data
 
 3. Go to the step3 folder and open the terminal under step3 folder. Type Command:
 java MainClassResult *.class
-
-The result of online cost, offline cost and accuracy will be output to the console and the result of predict will be output under result folder.

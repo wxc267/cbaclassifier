@@ -14,8 +14,8 @@ public class MainClassPrint {
 	{
 
 		Set<String> topicSet=new HashSet<>();//in case of duplicated class labels
-		FileWriter transactionWriter=new FileWriter("./result/transcation");
-		FileWriter classWriter=new FileWriter("./result/class");
+		FileWriter transactionWriter=new FileWriter("../step2/transcation");
+		FileWriter classWriter=new FileWriter("../step2/class");
 		classWriter.write("antecedent\n");
 		
 		for(int i=0;i<split;i++)
@@ -42,8 +42,8 @@ public class MainClassPrint {
 		}
 		transactionWriter.close();
 		classWriter.close();
-		FileWriter testDataWriter=new FileWriter("./result/testData");
-		FileWriter actualWriter=new FileWriter("./result/actual");
+		FileWriter testDataWriter=new FileWriter("../step2/testData");
+		FileWriter actualWriter=new FileWriter("../step2/actual");
 		for(int i=split;i<tfidfList.size();i++)
 		{
 			Set<String> keywords=tfidfList.get(i).keySet();
@@ -70,7 +70,7 @@ public class MainClassPrint {
 		
 		List<ReuterDoc> reuterList=new ArrayList<ReuterDoc>();
 		for(int i=1;i<22;i++){
-			String fileName="./data/reut2-"+UtilClass.GetThreeDigitsNumber(i)+".sgm";
+			String fileName="../data/reut2-"+UtilClass.GetThreeDigitsNumber(i)+".sgm";
 			List<ReuterDoc> reuters=FileParser.parse(fileName);
 			reuterList.addAll(reuters);
 		}
